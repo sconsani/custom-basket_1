@@ -41,7 +41,7 @@ def chocolate():
         pass
 
 chocolate()
-print final_quant
+# print final_quant
 
 print "\n"
 print "-----------------------------------"
@@ -66,10 +66,10 @@ def cheese ():
         pass
 
 cheese()
-print final_quant        
+# print final_quant        
 
 print "-----------------------------------"
-print " "
+print "\n"
 
 
 def crackers():
@@ -93,10 +93,10 @@ def crackers():
         pass
 
 crackers()
-print final_quant
+# print final_quant
 
 print "-------------------------------------"
-print " "
+print " \n"
 
 def popcorn():
     popcorn_quest = raw_input ("How about some POPCORN!?! ")
@@ -116,10 +116,10 @@ def popcorn():
         pass
 
 popcorn()
-print final_quant
+# print final_quant
 
 print "-------------------------------------"
-print " "
+print "\n"
 
 
 
@@ -133,7 +133,7 @@ def alcohol():
             beer_qty = int(beer_qty)
             final_quant ['beer'] = beer_qty
 
-            print " "
+            print "\n"
             print "adding it to your basket now!"
             print "Let's review your order!"
         else:
@@ -149,7 +149,7 @@ def alcohol():
                 winred_qty = int(winered_qty)
                 final_quant ['red wine'] = winered_qty
 
-                print " "
+                print "\n"
                 print "adding it to your basket now!"
                 print "Let's review your order!"
 
@@ -158,12 +158,12 @@ def alcohol():
                 winwhite_qty = int(winewhite_qty)
                 final_quant ['white wine'] = winewhite_qty
 
-                print " "
+                print "\n"
                 print "adding it to your basket now!"
                 print "Let's review your order!"
 
             else: 
-                print " "
+                print "\n"
                 print "sorry didn't quite catch that..."
                 print beerwine_quest
         else:
@@ -178,7 +178,7 @@ def alcohol():
             beer_qty = int(beer_qty)
             final_quant ['beer'] = beer_qty
 
-            print " "
+            print "\n"
             print "adding it to your basket now!"
             morewine()
 
@@ -186,10 +186,10 @@ def alcohol():
             wine_choice = raw_input ("red or white? ")
             if wine_choice == "red":
                 winered_qty = raw_input ("how many bottles would you like? ")
-                winred_qty = int(winered_qty)
+                winered_qty = int(winered_qty)
                 final_quant ['red wine'] = winered_qty
 
-                print " "
+                print "\n"
                 print "adding it to your basket now!"
                 morebeer()
 
@@ -198,12 +198,12 @@ def alcohol():
                 winewhite_qty = int(winewhite_qty)
                 final_quant ['white wine'] = winewhite_qty
 
-                print " "
+                print "\n"
                 print "adding it to your basket now!"
                 morebeer()
 
             else: 
-                print " "
+                print "\n"
                 print "sorry didn't quite catch that..."
                 print beerwine_quest
 
@@ -238,13 +238,13 @@ def costquant ():
     total_pop = popcorn_cost * popcorn_quant
 
 
-    whitewine_cost = (basket_items['white wine'])
-    whitewine_quant = (final_quant ['white wine'])
+    whitewine_cost = float(basket_items['white wine'])
+    whitewine_quant = float(final_quant ['white wine'])
     totalwhite =  whitewine_cost * whitewine_quant
 
 
-    redwine_cost = (basket_items['red wine'])
-    redwine_quant = (final_quant ['red wine'])
+    redwine_cost = float(basket_items['red wine'])
+    redwine_quant = float(final_quant ['red wine'])
     total_red = redwine_cost * redwine_quant
 
 
@@ -258,18 +258,18 @@ def costquant ():
 
 costquant()
 
-from flask import Flask, render_template
-app = Flask(__name__) 
+# from flask import Flask, render_template
+# app = Flask(__name__) 
 
-@app.route('/basketlist')
-def count():
-    words = ["hahaha", "heyyyy", "ahhhhh"]
-    numbers = range(3)
+# @app.route('/basketlist')
+# def count():
+#     words = ["hahaha", "heyyyy", "ahhhhh"]
+#     numbers = range(3)
 
-    return render_template('counter.html', numbers=numbers, words=words)
+#     return render_template('counter.html', numbers=numbers, words=words)
    
-if __name__=='__main__':
-    app.run(debug=True)
+# if __name__=='__main__':
+#     app.run(debug=True)
 
 
 
